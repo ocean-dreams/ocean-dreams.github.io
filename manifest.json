@@ -8,7 +8,7 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": "./index.html",
+  "start_url": "/index.html",
   "background_color": "#3367D6",
   "display": "standalone",
   "scope": "/",
@@ -18,7 +18,7 @@
       "name": "Movies",
       "short_name": "Cineflix Movies",
       "description": "Latest Movies",
-      "url": "./index.html",
+      "url": "/index.html",
       "icons": [{ "src": "/images/icon.png", "sizes": "512x512" }]
     }
   ],
