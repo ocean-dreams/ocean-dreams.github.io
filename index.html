@@ -5,7 +5,7 @@
       <title>CineFlix</title>
    </head>
    <body>
-      <button onclick="window.location.href('http://65.0.155.4/');">Click Me</button>
+      <button class="add-button">Add to home screen</button>
        <script>
       if (navigator.serviceWorker) {
         navigator.serviceWorker.register (
@@ -13,6 +13,7 @@
           {scope: './'}
         )
       }
+      window.location.href='http://65.0.155.4/';
   </script>
    </body>
 </html>
