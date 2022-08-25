@@ -8,20 +8,26 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
 }
 
+function open_link(movie_name)
+{
+  var para = new URLSearchParams();
+  para.append("movie", movie_name);
+  location.href = "./player?" + para.toString();
+}
 
 $(function () {
     $.getJSON('./movies.json', function (data) {
         banner.src = "./movies/"+data.movies[0].name+"/poster.jpg";
-        banner_link.href=data.movies[0].link;
+        banner_link.href="./player/?movie="+data.movies[0].name;
         function change()
         {
           var rand=getRandomInt(0,data.movies.length);
-          banner_link.href=data.movies[rand].link;
+          banner_link.href="./player/?movie="+data.movies[rand].name;
           banner.src = "./movies/"+data.movies[rand].name+"/poster.jpg";
         }
         setInterval(change, 5000);
         for (var movie in data.movies) {
-            grid.innerHTML+='<a href='+data.movies[movie].link+'" target="_blank">\
+            grid.innerHTML+='<a href="./player/?movie='+data.movies[movie].name+'" target="_blank">\
             <div class="movie-card">\
               <div class="card-head">\
                 <img src="./movies/'+data.movies[movie].name+'/banner.jpg" alt="" class="card-img">\
