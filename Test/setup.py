@@ -1,4 +1,3 @@
-from ctypes import cast
 import os
 import json
 from datetime import date
@@ -24,16 +23,24 @@ movie_name=input("Enter Movie Name : ")
 
 movie_year=int(input("Enter Movie Release Year : "))
 
-movie_link=input("Enter Trailer Link Link : ")
+movie_link=input("Enter Trailer Video Youtube Id : ")
+
+banner_img_link=input("Enter Banner Image Link : ")
+
+poster_img_link=input("Enter Poster Image Link : ")
 
 json_obj =  { "name":movie_name,"year":movie_year }
 
-json_obj_2={ "movie_name":movie_name,"year":movie_year,"link":movie_link,"cast_crew":[] }
+json_obj_2={ "movie_name":movie_name,"year":movie_year,"link":"https://www.youtube.com/embed/"+movie_link,"cast_crew":[] }
 
-if(len(movie_name)!=0 and len(movie_link)!=0 and movie_year>1900 and movie_year<=int(date.today().year)):
+if(len(banner_img_link)!=0 and len(movie_name)!=0 and len(movie_link)!=0 and movie_year>1900 and movie_year<=int(date.today().year)):
     os.mkdir("./movies/"+movie_name)
+    print('curl "'+banner_img_link+'" -o \"./movies/'+ movie_name + '/banner.jpg\"')
+    print('curl "'+poster_img_link+'" -o \"./movies/'+ movie_name + '/poster.jpg\"')
     create_json(json_obj_2, './movies/'+movie_name+'/data.json')
     write_json(json_obj, './movies.json')
+
+os.system("pause")    
 
     
 

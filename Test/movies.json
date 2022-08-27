@@ -2,27 +2,33 @@
     "movies": [
         {
             "name": "Cadaver",
-            "year": 2022
+            "year": 2022,
+            "link": "https://youtube.com/embed/pUAmZJH5xRI"
         },
         {
             "name": "Viruman",
-            "year": 2022
+            "year": 2022,
+            "link": "https://youtube.com/embed/aRx4-fsJ5uE"
         },
         {
             "name": "777 Charlie",
-            "year": 2022
+            "year": 2022,
+            "link": "https://youtube.com/embed/S_7XzVBKOv8"
         },
         {
             "name": "GrayMan",
-            "year": 2022
+            "year": 2022,
+            "link": "https://youtube.com/embed/pfLY_2f44pc"
         },
         {
             "name": "Dejavu",
-            "year": 2022
+            "year": 2022,
+            "link": "https://youtube.com/embed/dRjt2XJIJPc"
         },
         {
             "name": "Vikram",
-            "year": 2022
+            "year": 2022,
+            "link": "https://youtube.com/embed/OKBMCL-frPU"
         }
     ]
 }
